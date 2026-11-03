@@ -29,8 +29,8 @@ See [hardware/components.md](hardware/components.md) and [hardware/wiring.md](ha
 2. Calibrate the LM2596 output to approximately 5.0 V before connecting it to ESP32 VIN/5V.
 3. Upload the firmware from `firmware/car1/car1.ino` once that file is added.
 4. Power the car and connect a phone or computer to the ESP32 access point:
-   - **SSID:** `ESP32_Car`
-   - **Password:** `12345678`
+   - **SSID:** `ESP32_Car_2`
+   - **Password:** the value configured in `firmware/car1/car1.ino`
 5. Open `http://192.168.4.1` in a browser.
 6. Raise the wheels clear of the ground for the first movement test.
 
@@ -50,6 +50,10 @@ ESP32-WiFi-Robot-Car/
 └── docs/
     └── setup-and-usage.md
 ```
+
+## Public repository note
+
+The access-point SSID and password are configured in the firmware. Since this repository is public, anyone can read committed credentials. Use a unique robot-only password and change it before operating in a shared or public area. Do not reuse a personal or home Wi-Fi password.
 
 ## Safety
 
