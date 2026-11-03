@@ -31,12 +31,12 @@ That source file has not yet been committed. Upload the latest working sketch be
 
 1. Power the ESP32 and motor driver.
 2. On a phone or computer, join the ESP32 Wi-Fi network:
-   - SSID: `ESP32_Car`
-   - Password: `12345678`
+   - SSID: `ESP32_Car_2`
+   - Password: use the value configured in `firmware/car1/car1.ino`
 3. Open `http://192.168.4.1` in a browser.
 4. Use the on-screen direction controls. Release the control to stop movement; use the STOP control whenever needed.
 
-The reported firmware uses an ESP32 SoftAP and an HTTP web server on port 80. The command endpoint is `/cmd?d=F`, with direction values `F`, `B`, `L`, `R`, and `S`. The tested sketch also used a 1000 ms movement-command timeout.
+The uploaded firmware uses an ESP32 SoftAP and an HTTP web server on port 80. The command endpoint is `/cmd?d=F`, with direction values `F`, `B`, `L`, `R`, and `S`. The tested sketch also used a 1000 ms movement-command timeout.
 
 ## First test checklist
 
@@ -70,6 +70,10 @@ The reported firmware uses an ESP32 SoftAP and an HTTP web server on port 80. Th
 **The car curves instead of travelling straight**
 - Check wheel alignment, motor condition, battery level, and mechanical friction.
 - The two motors may not have identical speeds. The initial documented setup used ENA/ENB jumpers for full speed; PWM speed balancing is a separate modification.
+
+## Wi-Fi security
+
+This is a public repository. Any Wi-Fi password committed in the sketch is visible to everyone. Set a unique robot-only password in `car1.ino` before using the car in a shared or public area. Never reuse a personal or home-network password.
 
 ## Electrical safety
 
