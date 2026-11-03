@@ -2,7 +2,7 @@
 
 A two-motor robot car controlled wirelessly from a phone or computer through a web interface hosted by an ESP32.
 
-> **Project status:** The original ESP32 DevKit V1 setup has been tested with the car hardware. The firmware source will be added after the working `.ino` file is uploaded. Pin assignments and setup notes below document the current Car 1 configuration.
+> **Project status:** The original ESP32 DevKit V1 setup has been tested with the car hardware. The uploaded `firmware/car1/car1.ino` is the user-provided working sketch. Pin assignments and setup notes below document the current Car 1 configuration.
 
 ## Features
 
@@ -27,10 +27,10 @@ See [hardware/components.md](hardware/components.md) and [hardware/wiring.md](ha
 
 1. Assemble the hardware using the wiring guide.
 2. Calibrate the LM2596 output to approximately 5.0 V before connecting it to ESP32 VIN/5V.
-3. Upload the firmware from `firmware/car1/car1.ino` once that file is added.
+3. Open and upload `firmware/car1/car1.ino` using Arduino IDE.
 4. Power the car and connect a phone or computer to the ESP32 access point:
    - **SSID:** `ESP32_Car_2`
-   - **Password:** the value configured in `firmware/car1/car1.ino`
+   - **Password:** set in `firmware/car1/car1.ino`
 5. Open `http://192.168.4.1` in a browser.
 6. Raise the wheels clear of the ground for the first movement test.
 
@@ -43,7 +43,7 @@ ESP32-WiFi-Robot-Car/
 ├── README.md
 ├── firmware/
 │   └── car1/
-│       └── car1.ino        # Working firmware to be added
+│       ├── car1.ino        # ESP32 firmware
 ├── hardware/
 │   ├── components.md
 │   └── wiring.md
