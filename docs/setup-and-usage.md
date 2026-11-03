@@ -11,13 +11,13 @@ The previously tested environment used Espressif ESP32 Arduino core 3.3.12 and t
 
 ## Firmware
 
-The working firmware source is expected at:
+The working firmware source is committed at:
 
 ```text
 firmware/car1/car1.ino
 ```
 
-That source file has not yet been committed. Upload the latest working sketch before attempting to compile from this repository.
+This is the uploaded sketch from the working Car 1 setup.
 
 ## Uploading
 
@@ -70,6 +70,10 @@ The uploaded firmware uses an ESP32 SoftAP and an HTTP web server on port 80. Th
 **The car curves instead of travelling straight**
 - Check wheel alignment, motor condition, battery level, and mechanical friction.
 - The two motors may not have identical speeds. The initial documented setup used ENA/ENB jumpers for full speed; PWM speed balancing is a separate modification.
+
+## Wi-Fi security
+
+This is a public repository. Any Wi-Fi password committed in the sketch is visible to everyone. Set a unique robot-only password in `car1.ino` before using the car in a shared or public area. Never reuse a personal or home-network password.
 
 ## Wi-Fi security
 
